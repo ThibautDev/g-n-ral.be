@@ -1,0 +1,57 @@
+:root {
+    --c1: #EDF1D6;
+    --c2: #9DC08B;
+    --c3: #609966;
+    --c4: #40513B;
+}
+
+body{
+    color: var(--c1);
+    background-color: var(--c2);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+a{
+    color: var(--c2);
+}
+a:hover{
+    animation-name: link;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+@keyframes link{
+    from {color: var(--c2);}
+    to {color: var(--c4);}
+}
+
+.pannel{
+    position: absolute;
+    size: 10vh;
+    border-radius: 10px;
+    background-color: var(--c4);
+}
+.pannel p {
+    text-align: center;
+}
+
+.elem{
+    border-radius: 10px;
+    padding: 1.5vh;
+    margin-bottom: 1vh;
+
+    background-color: var(--c3);
+}
+
+input.elem{
+    border: none;
+    color: var(--c1);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+}
+input.elem::placeholder{
+    color: var(--c4);
+}

@@ -1,0 +1,79 @@
+#title{
+    color: var(--c4);
+    font-size: 250%;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    text-align: center;
+    top: 20%;
+}
+#title span{
+    font-size: 60%;
+}
+
+#form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vh;
+}
+#form header{
+    background-color: var(--c3);
+    border-radius: 10px 10px 0px 0px;
+    text-align: center;
+    padding: 0.5vh;
+}
+#form footer{
+    background-color: var(--c3);
+    border-radius: 0px 0px 10px 10px;
+    text-align: center;
+    font-size: 90%;
+    padding: 0.3vh;
+}
+#form input[type=text],#form input[type=email],#form input[type=password] {
+    display: block;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    width: calc(60% - 3vh);
+}
+#form input[type=submit]{
+    width: 20%;
+    margin-left: 40%;
+}
+input.elem:hover{
+    animation-name: inputHover;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+}
+input.elem:focus{
+    animation-name: inputFocus;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+}
+input:not(:focus) {
+    animation-name: inputUnfocus;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+}
+@keyframes inputHover{
+    from {transform: scale(102%);}
+    to {transform: scale(102%);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;}
+}
+@keyframes inputFocus {
+    from {}
+    to {transform: scale(102%);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;}
+}
+@keyframes inputUnfocus {
+    from {transform: scale(102%);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;}
+    to {transform: scale(100%);}
+}
+
+hr{
+    border: solid var(--c3);
+    width: 40%;
+    border-radius: 10px;
+}
